@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+	<title>Faculty Registration
+		</title>
+		{% load static %}
+		<link rel="stylesheet"  href="{% static 'css/style1.css'%}">
+		
+		<style>
+
+		</style>
+	</head>
+	<body class="menu">
+		<div class="navbar">
+			<ul>
+				<li><a href=#>Home</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</div>
+		<div class="side">
+			<ul>
+				<li><a href="{% url 'studentsprofile' %}">myprofile</a>
+					
+				</li>
+				<li><a href="{% url 'studentmark' %}">academics</a>
+				
+				</li>
+				<li><a href="{% url 'viewattendance' %}">attendance</a>
+				
+				</li>
+				<li><a href=#>Time table</a></li>
+				<li><a href="{% url 'stuleave' %}">Leave management</a></li>
+				<li><a href="{% url 'logout'%}">Logout</a><li>
+
+			</ul>
+		</div>
+		
+
+
+			<div class="freg">
+				<form action="{% url 'submit'%}" method="POST">
+                {% csrf_token %}
+                
+                <table class="">
+                <th class="frm">student_name </th>
+                <th class="frm">Date</th>
+                <th class="frm">status_h1</th>
+                <th class="frm">status_h2</th>
+                <th class="frm">status_h3</th>
+                <th class="frm">status_h4</th>
+                <th class="frm">status_h5</th>
+               
+                {%if authors%}
+                {%for i in authors%}
+                
+				
+                    <tr><td  class="frm">{{i.student_name}}</td>
+                    <td class="frm">{{i.Date}}</td>
+                    <td class="frm">{{i.status_h1}}</td>
+                    <td class="frm">{{i.status_h2}}</td>
+                    <td class="frm">{{i.status_h3}}</td> 
+                    <td class="frm">{{i.status_h4}}</td>
+                    <td class="frm">{{i.status_h5}}</td>
+                     
+                  </tr>
+                    
+                
+                {%endfor %}
+                {%endif %}
+
+					
+            </table>
+            
+				
+				</form>
+				
+			</div>
+				
+		</div>
+		
+		<div class="ft">
+			<footer><p>&copy 2018-2019 Bombo ltd</p>
+			</footer>
+		</div>
+	</body>
+</html>

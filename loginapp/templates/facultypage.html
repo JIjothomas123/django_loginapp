@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>admin</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+<style>
+</style>
+
+</head>
+<body class="menu">
+<div class="navbar">
+	<ul>
+		<li><a href=#>Home</a></li>
+		<li><a href="#">Gallery</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+</div>
+			<div class="side">
+				<ul>
+					<li><a href="{% url 'facprofile' %}">myprofile</a>
+						
+					</li>
+					<li><a href="#">Student</a>
+						<div class="subside">
+							<ul>
+								<li><a href="{% url 'studentreg' %}">Add Student</a></li>
+								<li><a href="{% url 'studentdet' %}">Student details</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="{% url 'Addattendance' %}">Add attendance</a></li>
+					<li><a href="{% url 'addmark' %}">Add Mark</a></li>
+					<li><a href="{% url 'fac_leave' %}">Leave management</a></li>
+					<li><a href="{%url 'logout'%}">Logout</a><li>
+				</ul>
+			</div>	
+</body>
+</html>

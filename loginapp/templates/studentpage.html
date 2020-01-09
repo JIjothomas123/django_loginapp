@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>admin</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+<style>
+</style>
+
+</head>
+<body class="menu">
+<div class="navbar">
+	<ul>
+		<li><a href=#>Home</a></li>
+		<li><a href="#">Gallery</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+</div>
+			<div class="side">
+				<ul>
+					<li><a href="#">Faculty</a>
+						<div class="subside">
+							<ul>
+								<li><a href="{% url 'facultyreg' %}">Add Faculty</a></li>
+								<li><a href="{% url 'facultydet' %}">Faculty details</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Student</a>
+						<div class="subside">
+							<ul>
+								<li><a href="{% url 'studentreg' %}">Add Student</a></li>
+								<li><a href="{% url 'studentdet' %}">Student details</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href=#>Time table</a></li>
+					<div >
+						<ul>
+							<li><a href="#">leave applications</a>
+								<div class="subside">
+									<ul>
+										<li><a href="{% url 'fac_leaveapprove' %}">Faculty</a></li>
+										<li><a href="{% url 'stu_leaveapprove' %}">student</a></li>
+									</ul>
+								</div> 
+								<li><a href="{%url 'logout'%}">Logout</a><li>
+				</ul>
+			</div>	
+</body>
+</html>

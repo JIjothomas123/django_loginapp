@@ -1,0 +1,23 @@
+<!doctypehtml>
+<html>
+<head>
+    {% load static %}
+    <link rel= "stylesheet" type="text/css" href="{% static 'css/style.css'%}"><title>www.drop.com</title>
+<Style>
+</style>
+</head>
+<body class="bi">
+    {%if authors%}
+    {%for i in authors%}
+     <h1 style="color:aliceblue">Name     :{{i.name}}</h1>
+     <h1 style="color:aliceblue">Email    :{{i.email}}</h1>
+     <h1 style="color:aliceblue">phone.no :{{i.phoneno}}</h1>
+    {%endfor %}
+    {%endif %}
+<div class="ft">
+<footer >
+<P>&copy 2018-19 company inc.</p>
+</footer>
+</div>
+</body>
+</html>
